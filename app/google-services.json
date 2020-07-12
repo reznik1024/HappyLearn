@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "441272214701",
+    "firebase_url": "https://happylearn-bbc3a.firebaseio.com",
+    "project_id": "happylearn-bbc3a",
+    "storage_bucket": "happylearn-bbc3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441272214701:android:6bb6231d8cb5c6bb529224",
+        "android_client_info": {
+          "package_name": "com.learn.HappyLearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441272214701-9orcoimmr7gskai3ik6uf55ucajfkmmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw1Fzh2bgd1jctg2GwR6fwBWJQgrsN4Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441272214701-9orcoimmr7gskai3ik6uf55ucajfkmmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441272214701:android:b0ff6e17ebff971f529224",
+        "android_client_info": {
+          "package_name": "org.sunspark.happylearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441272214701-9orcoimmr7gskai3ik6uf55ucajfkmmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw1Fzh2bgd1jctg2GwR6fwBWJQgrsN4Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441272214701-9orcoimmr7gskai3ik6uf55ucajfkmmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
