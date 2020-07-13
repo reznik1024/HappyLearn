@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Report"
+        android:icon="@drawable/ic_report_black_24dp">
+        <menu>
+            <item
+                android:id="@+id/nav_hardware"
+                android:title="Hardware"
+                android:icon="@drawable/ic_settings_24px"></item>
+            <item
+                android:id="@+id/nav_software"
+                android:title="Software"
+                android:icon="@drawable/ic_computer_black_24dp"></item>
+            <item
+                android:id="@+id/nav_lecturer"
+                android:title="Profile"
+                android:icon="@drawable/ic_account_circle_black_24dp"></item>
+        </menu>
+    </item>
+</menu>
