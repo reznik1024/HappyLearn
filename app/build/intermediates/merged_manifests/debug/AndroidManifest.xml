@@ -22,7 +22,9 @@
         <activity android:name="org.sunspark.happylearn.TeacherSignup" />
         <activity android:name="org.sunspark.happylearn.StudentSignup" />
         <activity android:name="org.sunspark.happylearn.SignUp" />
-        <activity android:name="org.sunspark.happylearn.MainActivity" >
+        <activity
+            android:name="org.sunspark.happylearn.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

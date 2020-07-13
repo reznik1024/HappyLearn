@@ -30,7 +30,7 @@
 21        android:theme="@style/AppTheme" >
 21-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:11:9-40
 22        <activity android:name="org.sunspark.happylearn.TeacherSignup" />
-22-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:12:9-60
+22-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:12:9-51
 22-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:12:19-48
 23        <activity android:name="org.sunspark.happylearn.StudentSignup" />
 23-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:13:9-51
@@ -38,77 +38,80 @@
 24        <activity android:name="org.sunspark.happylearn.SignUp" />
 24-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:9-44
 24-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:19-41
-25        <activity android:name="org.sunspark.happylearn.MainActivity" >
+25        <activity
 25-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:15:9-21:20
-25-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:15:19-47
-26            <intent-filter>
-26-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:16:13-20:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:17:17-69
-27-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:17:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:19:17-77
-29-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:19:27-74
-30            </intent-filter>
-31        </activity>
-32        <activity
-32-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
-33            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-33-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
-34            android:excludeFromRecents="true"
-34-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
-35            android:exported="true"
-35-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
-36            android:launchMode="singleTask"
-36-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
-37            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-37-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
-38            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-38-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
-39
-40        <service
-40-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
-41            android:name="com.google.firebase.components.ComponentDiscoveryService"
-41-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
-42            android:directBootAware="true"
-42-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-43            android:exported="false" >
-43-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
-44            <meta-data
-44-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
-45                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-45-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
-46                android:value="com.google.firebase.components.ComponentRegistrar" />
-46-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
-47        </service>
-48
-49        <activity
-49-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-50            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-50-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-51            android:exported="false"
-51-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-52            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-52-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-53
-54        <provider
-54-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-55            android:name="com.google.firebase.provider.FirebaseInitProvider"
-55-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-56            android:authorities="org.sunspark.happylearn.firebaseinitprovider"
-56-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-57            android:exported="false"
-57-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-58            android:initOrder="100" />
-58-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-59
-60        <meta-data
-60-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-61            android:name="com.google.android.gms.version"
-61-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-62            android:value="@integer/google_play_services_version" />
-62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-63    </application>
-64
-65</manifest>
+26            android:name="org.sunspark.happylearn.MainActivity"
+26-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:15:19-47
+27            android:theme="@style/AppTheme.NoActionBar" >
+27-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:15:48-91
+28            <intent-filter>
+28-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:16:13-20:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:17:17-69
+29-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:17:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:19:17-77
+31-->C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:19:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:24:9-31:50
+35            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+35-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:25:13-85
+36            android:excludeFromRecents="true"
+36-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:26:13-46
+37            android:exported="true"
+37-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:27:13-36
+38            android:launchMode="singleTask"
+38-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:28:13-44
+39            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+39-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:29:13-102
+40            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+40-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:30:13-72
+41
+42        <service
+42-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:33:9-39:19
+43            android:name="com.google.firebase.components.ComponentDiscoveryService"
+43-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:34:13-84
+44            android:directBootAware="true"
+44-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
+45            android:exported="false" >
+45-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:35:13-37
+46            <meta-data
+46-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:36:13-38:85
+47                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+47-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:37:17-109
+48                android:value="com.google.firebase.components.ComponentRegistrar" />
+48-->[com.google.firebase:firebase-auth:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\4189c7719053123afa41922c68903b5b\jetified-firebase-auth-19.3.0\AndroidManifest.xml:38:17-82
+49        </service>
+50
+51        <activity
+51-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+52            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+52-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+53            android:exported="false"
+53-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+54            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+54-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\75e7c473eccef2b3a0eec97fa3a7825b\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+55
+56        <provider
+56-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
+57            android:name="com.google.firebase.provider.FirebaseInitProvider"
+57-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
+58            android:authorities="org.sunspark.happylearn.firebaseinitprovider"
+58-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
+59            android:exported="false"
+59-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
+60            android:initOrder="100" />
+60-->[com.google.firebase:firebase-common:19.3.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\3deb10f8139ef5717b3d54ada2a19ca4\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
+61
+62        <meta-data
+62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+63            android:name="com.google.android.gms.version"
+63-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+64            android:value="@integer/google_play_services_version" />
+64-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Ron David\.gradle\caches\transforms-2\files-2.1\164bb505b81f338baa0db13edd04c1d1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+65    </application>
+66
+67</manifest>
