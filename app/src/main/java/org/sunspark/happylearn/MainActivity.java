@@ -62,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case  R.id.Home:
+            case  R.id.Profile:
+
+        }
         if(item.getItemId() == R.id.Home){
 
         }
