@@ -14,14 +14,18 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, MainFragment.onFragmentButtonClicked{
     SharedPreferences sp;
     TextView tx;
     FirebaseAuth fAuth;
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         fAuth = FirebaseAuth.getInstance();
@@ -52,16 +57,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction.commit();
 
        if(fAuth.getCurrentUser() ==null)updateUI();
-        SharedPreferences sp = getApplicationContext().getSharedPreferences("NotLogedIn", Context.MODE_PRIVATE);
-       tx  = (TextView) findViewById(R.id.text);
-   /*     if(sp.getBoolean("NotLogedIn", true)){
-                Intent i = new Intent(this, SignUp.class);
-                startActivity(i);
-            tx.setText("oops");
-        } else{
-            tx.setText("oopsie");
-        }*/
-;
     }
 
     private void updateUI()
@@ -87,5 +82,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.commit();
         }
         return true;
+    }
+
+    @Override
+    public void onButtonSelected(Button btn) {
+        if(btn == findViewById(R.id.SignOutBtnT))
+        {
+           FirebaseAuth.getInstance().signOut();
+            Toast.makeText(this,"Signed out", Toast.LENGTH_SHORT).show();
+            updateUI();
+        }
+
     }
 }

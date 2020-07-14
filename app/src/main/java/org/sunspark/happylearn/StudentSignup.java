@@ -14,9 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.jar.Attributes;
 
@@ -28,12 +33,14 @@ public class StudentSignup extends AppCompatActivity {
     EditText Email;
     FirebaseAuth fAuth;
     Button signUpbtn;
+    private FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_signup);
         fAuth = FirebaseAuth.getInstance();
         signUpbtn  = (Button) findViewById(R.id.signUpbtn);
+         db = FirebaseFirestore.getInstance();
         signUpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +51,27 @@ public class StudentSignup extends AppCompatActivity {
                 Email = (EditText) findViewById(R.id.Email);
                 if(StudentSignUpCheckValid()) {
                     String email = Email.getText().toString().trim();
-                    String password = Password.getText().toString().trim();
+                    final String password = Password.getText().toString().trim();
                     fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                CollectionReference dbUsers =  db.collection("users");
+                                User user = new User(PhoneNumber.getText().toString(),Name.getText().toString(),FamilyName.getText().toString(),Email.getText().toString(),Password.getText().toString());
+                                dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference) {
+                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                    }
+                                })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+
+
                                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                             } else {
                                 Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
