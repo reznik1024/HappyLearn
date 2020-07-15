@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.687">
 
         <Button
-            android:id="@+id/student"
+            android:id="@+id/SignUpbtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -31,7 +31,7 @@
             android:text="Sign Up" />
 
         <Button
-            android:id="@+id/teacher"
+            android:id="@+id/SignInbtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

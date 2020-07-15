@@ -23,6 +23,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.jar.Attributes;
 
 public class StudentSignup extends AppCompatActivity {
@@ -33,14 +35,17 @@ public class StudentSignup extends AppCompatActivity {
     EditText Email;
     FirebaseAuth fAuth;
     Button signUpbtn;
-    private FirebaseFirestore db;
+    String UserID;
+   // FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_signup);
+
         fAuth = FirebaseAuth.getInstance();
+       // db = FirebaseFirestore.getInstance();
+        final FirebaseFirestore db = FirebaseFirestore.getInstance();
         signUpbtn  = (Button) findViewById(R.id.signUpbtn);
-         db = FirebaseFirestore.getInstance();
         signUpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,32 +54,90 @@ public class StudentSignup extends AppCompatActivity {
                 PhoneNumber = (EditText) findViewById(R.id.PhoneNumber);
                 Password = (EditText) findViewById(R.id.Password);
                 Email = (EditText) findViewById(R.id.Email);
+
+                 final String email = Email.getText().toString().trim();
+                 final String password = Password.getText().toString().trim();
+                 final String phoneNum =PhoneNumber.getText().toString().trim();
+                 final String name = Name.getText().toString().trim();
+                 final String familyName = FamilyName.getText().toString().trim();
+
                 if(StudentSignUpCheckValid()) {
-                    String email = Email.getText().toString().trim();
-                    final String password = Password.getText().toString().trim();
+
                     fAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                CollectionReference dbUsers =  db.collection("users");
-                                User user = new User(PhoneNumber.getText().toString(),Name.getText().toString(),FamilyName.getText().toString(),Email.getText().toString(),Password.getText().toString());
-                                dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                    @Override
-                                    public void onSuccess(DocumentReference documentReference) {
-                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
-                                    }
-                                })
+                                Toast.makeText(StudentSignup.this, "1", Toast.LENGTH_SHORT).show();
+                                Map<String,Object> user= new HashMap<>();
+                                user.put("Name",name);
+                                user.put("Family Name",familyName);
+                                user.put("Phoneumber",phoneNum);
+                                user.put("Email",email);
+                                user.put("Password",password);
+                                db.collection("users")
+                                        .add(user)
+                                        .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DocumentReference> task) {
+                                                Toast.makeText(StudentSignup.this, "Signed up complete", Toast.LENGTH_SHORT).show();
+                                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                            }
+                                        })
                                         .addOnFailureListener(new OnFailureListener() {
                                             @Override
                                             public void onFailure(@NonNull Exception e) {
                                                 Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
                                             }
-                                        });
+                                        }).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference) {
+                                        Toast.makeText(StudentSignup.this, "Signed up sucsses", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    }
+                                });
+                                Toast.makeText(StudentSignup.this, "2", Toast.LENGTH_SHORT).show();
 
+                      /*         UserID=fAuth.getCurrentUser().getUid();
+                               DocumentReference documentReference = db.collection("users").document(UserID);
+                                Map<String,Object> user= new HashMap<>();
+                                user.put("Name",name);
+                                user.put("Family Name",familyName);
+                                user.put("Phoneumber",phoneNum);
+                                user.put("Email",email);
+                                user.put("Password",password);
+                                 user.put("Status","Student");
+                                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    }
+                                }).addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });*/
+                           /*   CollectionReference dbUsers =  db.collection("users");
+                                User user = new User(phoneNum,name,familyName,email,password);
+                                dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>()
+                                {
+                                    @Override
+                                    public void onSuccess(DocumentReference documentReference)
+                                    {
+                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    }
 
-                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });*/
+
                             } else {
-                                Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(StudentSignup.this, "Sign up firebase failed", Toast.LENGTH_SHORT).show();
                             }
                         }
                         });

@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\layout_lesson_fragment.xml.flat",
+        "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\layout\\lesson_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -46,6 +50,10 @@
     {
         "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_in.xml.flat",
+        "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
     },
     {
         "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -82,6 +90,10 @@
     {
         "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_toolbar.xml.flat",
         "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\layout\\drawer_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_in_or_sign_up.xml.flat",
+        "source": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\src\\main\\res\\layout\\activity_sign_in_or_sign_up.xml"
     },
     {
         "merged": "C:\\Users\\Ron David\\Desktop\\projects\\android\\HappyLearn-20200625T132031Z-001\\HappyLearn\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",

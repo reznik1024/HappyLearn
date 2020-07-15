@@ -1,7 +1,7 @@
 package org.sunspark.happylearn;
 
 public class User {
-    String PhoneNumber,Name,FamilyName,Email,Password;
+    private String PhoneNumber,Name,FamilyName,Email,Password;
 
     public User() {
 

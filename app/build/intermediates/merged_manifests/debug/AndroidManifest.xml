@@ -24,8 +24,18 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="org.sunspark.happylearn.TeacherSignup" />
-        <activity android:name="org.sunspark.happylearn.StudentSignup" />
+        <activity
+            android:name="org.sunspark.happylearn.SignIn"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.SignInOrSignUp"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.TeacherSignup"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.StudentSignup"
+            android:theme="@style/AppThemeRedActionBar" />
         <activity
             android:name="org.sunspark.happylearn.SignUp"
             android:theme="@style/AppThemeRedActionBar" />
