@@ -107,7 +107,9 @@ ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T13203
 	android:name
 		ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:13:19-48
 activity#org.sunspark.happylearn.SignUp
-ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:9-44
+ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:9-89
+	android:theme
+		ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:43-86
 	android:name
 		ADDED from C:\Users\Ron David\Desktop\projects\android\HappyLearn-20200625T132031Z-001\HappyLearn\app\src\main\AndroidManifest.xml:14:19-41
 activity#org.sunspark.happylearn.MainActivity

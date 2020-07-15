@@ -27,7 +27,9 @@
         android:theme="@style/AppTheme" >
         <activity android:name="org.sunspark.happylearn.TeacherSignup" />
         <activity android:name="org.sunspark.happylearn.StudentSignup" />
-        <activity android:name="org.sunspark.happylearn.SignUp" />
+        <activity
+            android:name="org.sunspark.happylearn.SignUp"
+            android:theme="@style/AppThemeRedActionBar" />
         <activity
             android:name="org.sunspark.happylearn.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
