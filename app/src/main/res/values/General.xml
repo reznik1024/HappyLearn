@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="LessonType">
+        <item>Math</item>
+        <item>Biology</item>
+        <item>Chemistry</item>
+        <item>Physics</item>
+        <item>English</item>
+        <item>Literature</item>
+        <item>Android</item>
+        <item>C#</item>
+    </string-array>
+</resources>

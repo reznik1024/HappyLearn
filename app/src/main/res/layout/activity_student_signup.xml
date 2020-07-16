@@ -6,7 +6,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentSignup">
+    tools:context=".StudentSignup"
+    android:layout_gravity="center"
+    >
 
     <!--  Name Label -->
 
@@ -31,7 +33,9 @@
             android:layout_marginBottom="10dp"
             android:layout_weight="0.1"
             android:hint="Name"
-            android:inputType="textCapWords" />
+            android:inputType="textCapWords"
+
+            />
 
         <EditText
             android:id="@+id/FamilyName"
@@ -83,26 +87,27 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Sign up"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<Button
-    android:id="@+id/signUpbtn"
-    android:layout_width="150dp"
-    android:layout_height="72dp"
-    android:gravity="center"
-    android:text="Sign Up!"
-    android:textSize="18sp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-    />
+    <Button
+        android:id="@+id/signUpbtn"
+        android:layout_width="155dp"
+        android:layout_height="42dp"
+        android:background="@drawable/rounded_button"
+        android:gravity="center"
+        android:text="Sign Up!"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 
 

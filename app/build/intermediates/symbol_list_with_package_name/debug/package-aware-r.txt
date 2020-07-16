@@ -45,6 +45,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array LessonType
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -726,6 +727,7 @@ bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
+color White
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1417,6 +1419,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rounded_button
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1428,6 +1431,7 @@ id Email
 id FUNCTION
 id FamilyName
 id Home
+id InstType
 id META
 id Name
 id Password
@@ -1435,8 +1439,13 @@ id PhoneNumber
 id Profile
 id SHIFT
 id SYM
+id SignInbtn
+id SignInbtn2
+id SignOutBtnT
+id SignUpbtn2
 id TOP_END
 id TOP_START
+id TypeSpin
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -1526,6 +1535,7 @@ id custom
 id customPanel
 id cut
 id dark
+id date
 id date_picker_actions
 id decor_content_parent
 id default_activity_button
@@ -1540,6 +1550,7 @@ id direct
 id disableHome
 id drawer
 id dropdown_menu
+id editText
 id edit_query
 id end
 id enterAlways
@@ -1580,6 +1591,7 @@ id light
 id line1
 id line3
 id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id masked
@@ -1688,7 +1700,6 @@ id student
 id submenuarrow
 id submit_area
 id tabMode
-id tableLayout
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -1710,6 +1721,10 @@ id textView
 id textView2
 id textView3
 id textView4
+id textView5
+id textView6
+id textView7
+id textView8
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -1801,6 +1816,8 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_sign_in
+layout activity_sign_in_or_sign_up
 layout activity_sign_up
 layout activity_student_signup
 layout activity_teacher_signup
@@ -1823,6 +1840,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout drawer_header
 layout drawer_toolbar
+layout fragment_main
+layout lesson_fragment
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -1857,6 +1876,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout profile_fragment
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -1996,6 +2016,7 @@ style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme
 style AppTheme_NoActionBar
+style AppThemeRedActionBar
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

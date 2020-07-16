@@ -8,6 +8,11 @@
         android:minSdkVersion="29"
         android:targetSdkVersion="29" />
 
+    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -19,9 +24,21 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="org.sunspark.happylearn.TeacherSignup" />
-        <activity android:name="org.sunspark.happylearn.StudentSignup" />
-        <activity android:name="org.sunspark.happylearn.SignUp" />
+        <activity
+            android:name="org.sunspark.happylearn.SignIn"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.SignInOrSignUp"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.TeacherSignup"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.StudentSignup"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name="org.sunspark.happylearn.SignUp"
+            android:theme="@style/AppThemeRedActionBar" />
         <activity
             android:name="org.sunspark.happylearn.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -45,6 +62,9 @@
             android:exported="false" >
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
