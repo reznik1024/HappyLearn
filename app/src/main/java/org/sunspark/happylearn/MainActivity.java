@@ -71,82 +71,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
-    final FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-
-    /*********
-    ********************************************************************************************
-    */
-/**
-    public void Test()
-    {
-
-    Map<String, Object> user = new HashMap<>();
-    user.put("Phoneumber", "12345");
-    user.put("Email", "dindon");
-    user.put("Password", "12345d");
-
-        db.collection("users")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Toast.makeText(MainActivity.this, document.getId() + " => " + document.getData(), Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-                            Toast.makeText(MainActivity.this, "Error getting documents.", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
-
-
-
-
-    db.collection("users")
-    .add(user)
-/**
-    .addOnCompleteListener(new OnCompleteListener<DocumentReference>()
-    {
-        @Override
-        public void onComplete(@NonNull Task<DocumentReference> task)
-        {
-            Toast.makeText(StudentSignup.this, "Stage 1", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        }
-
-    })
-
-    .addOnFailureListener(new OnFailureListener()
-     {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-            Toast.makeText(MainActivity.this, "Sign up failed", Toast.LENGTH_SHORT).show();
-        }
-    }).addOnSuccessListener(new OnSuccessListener<DocumentReference>()
-    {
-        @Override
-        public void onSuccess(DocumentReference documentReference)
-        {
-            Toast.makeText(MainActivity.this, "Signed up sucsses", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
-        }
-    });
-        Toast.makeText(MainActivity.this, "test done", Toast.LENGTH_SHORT).show();
-    }
-*/
-    /*********
-     ********************************************************************************************
-     */
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
      //   Test();
-
+        final FirebaseFirestore db = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -164,9 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container_fragment,new MainFragment());
         fragmentTransaction.commit();
-/****
- * //  if(fAuth.getCurrentUser() ==null)updateUI();
- * */
+
         if(fAuth.getCurrentUser() ==null)updateUI();
 
     }

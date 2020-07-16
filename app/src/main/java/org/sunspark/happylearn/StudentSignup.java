@@ -68,7 +68,7 @@ public class StudentSignup extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 Toast.makeText(StudentSignup.this, "1", Toast.LENGTH_SHORT).show();
-                                Map<String,Object> user= new HashMap<>();
+                        /*        Map<String,Object> user= new HashMap<>();
                                 user.put("Name",name);
                                 user.put("Family Name",familyName);
                                 user.put("Phoneumber",phoneNum);
@@ -94,11 +94,11 @@ public class StudentSignup extends AppCompatActivity {
                                         Toast.makeText(StudentSignup.this, "Signed up sucsses", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                     }
-                                });
-                                Toast.makeText(StudentSignup.this, "2", Toast.LENGTH_SHORT).show();
+                                });*/
 
-                      /*         UserID=fAuth.getCurrentUser().getUid();
-                               DocumentReference documentReference = db.collection("users").document(UserID);
+
+                                UserID=fAuth.getCurrentUser().getUid();
+                                DocumentReference documentReference = db.collection("users").document(UserID);
                                 Map<String,Object> user= new HashMap<>();
                                 user.put("Name",name);
                                 user.put("Family Name",familyName);
@@ -106,10 +106,17 @@ public class StudentSignup extends AppCompatActivity {
                                 user.put("Email",email);
                                 user.put("Password",password);
                                  user.put("Status","Student");
-                                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                documentReference.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(StudentSignup.this, "Signed up yay", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                    }
+                                })
+                                        .addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(StudentSignup.this, "Signed up nay", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
@@ -117,7 +124,8 @@ public class StudentSignup extends AppCompatActivity {
                                     public void onFailure(@NonNull Exception e) {
                                         Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
                                     }
-                                });*/
+                                });
+                                Toast.makeText(StudentSignup.this, "2", Toast.LENGTH_SHORT).show();
                            /*   CollectionReference dbUsers =  db.collection("users");
                                 User user = new User(phoneNum,name,familyName,email,password);
                                 dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>()

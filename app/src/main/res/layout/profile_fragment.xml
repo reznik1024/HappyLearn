@@ -10,22 +10,40 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="112dp"
         android:text="Profile"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/SignOutBtnT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign Out"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/rounded_button"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.509" />
+        tools:layout_editor_absoluteX="0dp"
+
+        >
+
+        <Button
+            android:id="@+id/LessonRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/White"
+            android:text="Create Lesson Request"
+
+            />
+
+        <Button
+            android:id="@+id/SignOutBtnT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/White"
+            android:text="Sign Out"
+
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
