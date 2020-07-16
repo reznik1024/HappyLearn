@@ -105,7 +105,7 @@ public class StudentSignup extends AppCompatActivity {
                                 user.put("Phoneumber",phoneNum);
                                 user.put("Email",email);
                                 user.put("Password",password);
-                                 user.put("Status","Student");
+                                user.put("Status","Student");
                                 documentReference.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {

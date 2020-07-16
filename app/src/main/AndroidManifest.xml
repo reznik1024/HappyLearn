@@ -8,11 +8,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignIn" android:theme="@style/AppThemeRedActionBar"></activity>
-        <activity android:name=".SignInOrSignUp" android:theme="@style/AppThemeRedActionBar"/>
-        <activity android:name=".TeacherSignup" android:theme="@style/AppThemeRedActionBar"/>
-        <activity android:name=".StudentSignup" android:theme="@style/AppThemeRedActionBar" />
+        <activity android:name=".StudentRequestLesson"></activity>
+        <activity android:name=".TeacherCreateLesson" />
+        <activity
+            android:name=".SignIn"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name=".SignInOrSignUp"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name=".TeacherSignup"
+            android:theme="@style/AppThemeRedActionBar" />
+        <activity
+            android:name=".StudentSignup"
+            android:theme="@style/AppThemeRedActionBar" />
         <activity
             android:name=".SignUp"
             android:theme="@style/AppThemeRedActionBar" />
