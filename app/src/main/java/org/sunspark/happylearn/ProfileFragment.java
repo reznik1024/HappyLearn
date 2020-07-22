@@ -2,6 +2,7 @@ package org.sunspark.happylearn;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
@@ -47,34 +49,17 @@ public class ProfileFragment extends Fragment {
 
         final Button lessonRequest = (Button)  view.findViewById(R.id.LessonRequest);
         final TextView status = (TextView) view.findViewById(R.id.Status);
-
         fAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         UserID = fAuth.getCurrentUser().getUid();
-        final DocumentReference documentReference = db.collection("users").document(UserID);
-
-        documentReference.addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                status.setText(value.getString("Status"));
-                str=status.toString().trim();
-                if(status.toString().trim() =="Student")
-                {
-                    lessonRequest.setText("Create Lesson Request");
-                } else if (str =="Teacher"){
-                    lessonRequest.setText("Create New Lesson");
-                }
-                Toast.makeText(getActivity(), str, Toast.LENGTH_SHORT).show();
-            }
-        });
-
+        DetermineStatus(view);
         lessonRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                 if(lessonRequest.getText().toString() == "Create Lesson Request"){
+                 if(lessonRequest.getText().toString().equals("Create Lesson Request")){
                      Intent intent = new Intent(getActivity(), StudentRequestLesson.class);
                      startActivity(intent);
-                 }else if (lessonRequest.getText().toString() == "Create New Lesson"){
+                 }else if (lessonRequest.getText().toString().equals("Create New Lesson")){
                      Intent intent = new Intent(getActivity(), TeacherCreateLesson.class);
                      startActivity(intent);
                  }
@@ -82,6 +67,18 @@ public class ProfileFragment extends Fragment {
         });
 
         return view;
+    }
+
+    public void DetermineStatus(View view){
+        final Button lessonRequest = (Button)  view.findViewById(R.id.LessonRequest);
+        final TextView status = (TextView) view.findViewById(R.id.Status);
+        SharedPreferences sharedPref = getActivity().getSharedPreferences("MySharedPref",Context.MODE_PRIVATE);
+        status.setText( sharedPref.getString("Status", "null"));
+        if(status.getText().equals("Student")) {
+            lessonRequest.setText("Create Lesson Request");
+        } else if(status.getText().equals("Teacher")){
+            lessonRequest.setText("Create New Lesson");
+        }
     }
 
     @Override

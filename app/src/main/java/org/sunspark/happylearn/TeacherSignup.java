@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -65,28 +66,6 @@ public class TeacherSignup extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                         /*       Toast.makeText(TeacherSignup.this, "1", Toast.LENGTH_SHORT).show();
-                                Map<String,Object> user= new HashMap<>();
-                                user.put("Name",name);
-                                user.put("Family Name",familyName);
-                                user.put("Phoneumber",phoneNum);
-                                user.put("Email",email);
-                                user.put("Password",password);
-                                db.collection("users")
-                                        .add(user)
-                                        .addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-                                            @Override
-                                            public void onComplete(@NonNull Task<DocumentReference> task) {
-                                                Toast.makeText(TeacherSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
-                                                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                                            }
-                                        })
-                                        .addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(TeacherSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
-                                            }
-                                        });*/
 
                               UserID=fAuth.getCurrentUser().getUid();
                                DocumentReference documentReference = db.collection("users").document(UserID);
@@ -100,8 +79,12 @@ public class TeacherSignup extends AppCompatActivity {
                                 documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                        Toast.makeText(TeacherSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(TeacherSignup.this, "Signed up yay", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                                        myEdit.putString("Status", "Teacher");
+                                        myEdit.commit();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
@@ -109,23 +92,25 @@ public class TeacherSignup extends AppCompatActivity {
                                         Toast.makeText(TeacherSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
                                     }
                                 });
-                           /*   CollectionReference dbUsers =  db.collection("users");
-                                User user = new User(phoneNum,name,familyName,email,password);
-                                dbUsers.add(user).addOnSuccessListener(new OnSuccessListener<DocumentReference>()
-                                {
+                              /**  documentReference.set(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
-                                    public void onSuccess(DocumentReference documentReference)
-                                    {
-                                        Toast.makeText(StudentSignup.this, "Signed up", Toast.LENGTH_SHORT).show();
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        Toast.makeText(TeacherSignup.this, "Signed up yay", Toast.LENGTH_SHORT).show();
                                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                                        myEdit.putString("Status", "Teacher");
+                                        myEdit.commit();
                                     }
-
                                 }).addOnFailureListener(new OnFailureListener() {
-                                            @Override
-                                            public void onFailure(@NonNull Exception e) {
-                                                Toast.makeText(StudentSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
-                                            }
-                                        });*/
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(TeacherSignup.this, "Sign up failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });*/
+
+
+
                                 Toast.makeText(TeacherSignup.this, "2", Toast.LENGTH_SHORT).show();
                             } else {
                                 Toast.makeText(TeacherSignup.this, "Sign up firebase failed", Toast.LENGTH_SHORT).show();
