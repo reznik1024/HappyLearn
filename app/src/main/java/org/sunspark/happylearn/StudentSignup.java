@@ -26,6 +26,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.jar.Attributes;
 
 public class StudentSignup extends AppCompatActivity {
@@ -34,19 +35,21 @@ public class StudentSignup extends AppCompatActivity {
     EditText PhoneNumber;
     EditText Password;
     EditText Email;
-    FirebaseAuth fAuth;
+    final FirebaseFirestore db = FirebaseFirestore.getInstance();
+    FirebaseAuth fAuth = FirebaseAuth.getInstance();
     Button signUpbtn;
     String UserID;
+    //final FirebaseFirestore db = FirebaseFirestore.getInstance();
    // FirebaseFirestore db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_signup);
 
-        fAuth = FirebaseAuth.getInstance();
-       // db = FirebaseFirestore.getInstance();
-        final FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Test();
+
         signUpbtn  = (Button) findViewById(R.id.signUpbtn);
+
         signUpbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,6 +167,51 @@ public class StudentSignup extends AppCompatActivity {
        CharSequence c = text.getText().toString();
        return  TextUtils.isEmpty(c);
 
+    }
+
+
+    public void Test()
+    {
+        Random r = new Random();
+        final String email = "0003@gmail.com";
+        final String password = "pass111";
+        fAuth.createUserWithEmailAndPassword(email, password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+
+                Toast.makeText(StudentSignup.this, "1", Toast.LENGTH_SHORT).show();
+                UserID=fAuth.getCurrentUser().getUid();
+                DocumentReference documentReference = db.collection("users").document(UserID);
+                Map<String,Object> user= new HashMap<>();
+                user.put("Phoneumber", "1234567");
+                user.put("Email",email);
+                user.put("Password",password );
+
+                documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(StudentSignup.this, "Signed up test complete", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                        myEdit.putString("Status", "Teacher");
+                        myEdit.commit();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(StudentSignup.this, "Sign up test failed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                Toast.makeText(StudentSignup.this, "2", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(StudentSignup.this, "This is bad test", Toast.LENGTH_SHORT).show();
+            }
+        });
+        Toast.makeText(StudentSignup.this, "test test done", Toast.LENGTH_SHORT).show();
     }
 
 }
